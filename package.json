@@ -1,0 +1,21 @@
+{
+  "name": "esbuild-react",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "hiro08gh",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "esbuild": "^0.6.8",
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "build:dev": "esbuild src/index.tsx --bundle '--define:process.env.NODE_ENV=\"development\"' --outfile=dist/dev.js",
+    "build:prod": "esbuild src/index.tsx --bundle '--define:process.env.NODE_ENV=\"production\"' --minify --outfile=dist/prod.js"
+  }
+}
